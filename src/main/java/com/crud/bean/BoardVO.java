@@ -4,46 +4,116 @@ import java.util.Date;
 
 public class BoardVO {
     private int seq;
-    private String title;
-    private String writer;
-    private String content;
-    private Date regdate;
-    private int cnt;
+    private String id;
+    private String word;
+    private String meaning;
+    private String address;
+    private String address2;
+    private String email;
+    private String date;
+    private String password;
+    private String school;
+    private String level;
 
-    public int getSeq() {
-        return seq;
+    public int getSeq(){
+        return  seq;
     }
-    public void setSeq(int seq) {
-        this.seq = seq;
+
+    // level에 대한 setter 메소드 추가
+    public void setSeq(int seq){
+
+        this.seq =seq;
     }
-    public String getTitle() {
-        return title;
+
+
+
+    public String getId(){
+        return id;
     }
-    public void setTitle(String title) {
-        this.title = title;
+    public void setId(String id) {
+        this.id = id;
     }
-    public String getWriter() {
-        return writer;
+
+
+    public String getWord(){
+        return word;
     }
-    public void setWriter(String writer) {
-        this.writer = writer;
+    public void setWord(String word) {
+        this.word = word;
     }
-    public String getContent() {
-        return content;
+    public String getDate(){
+        return date;
     }
-    public void setContent(String content) {
-        this.content = content;
+    public void setDate(String date) {
+        this.date = date;
     }
-    public Date getRegdate() {
-        return regdate;
+    public String getMeaning(){
+        return meaning;
     }
-    public void setRegdate(Date regdate) {
-        this.regdate = regdate;
+    public String getAddress(){
+        return address;
     }
-    public int getCnt() {
-        return cnt;
+    public String getAddress2(){
+        return address2;
     }
-    public void setCnt(int cnt) {
-        this.cnt = cnt;
+    public String getEmail(){
+        return email;
     }
+    public String getLevel(){
+        return level;
+    }
+    public String getSchool(){
+        return school;
+    }
+
+    public void setMeaning(String meaning) {
+        this.meaning = meaning;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public void setAddress2(String address2) {
+        this.address2 = address2;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public void setSchool(String school) {
+        this.school = school;
+    }
+
+    public void setLevel(String level) {
+        this.level = level;
+    }
+
+    public String getPassword(){
+        return password;
+    }
+
 }
+
+/*
+    seq INT AUTO_INCREMENT PRIMARY KEY,
+            id VARCHAR(20),
+    word VARCHAR(20),
+    meaning VARCHAR(20),
+    date VARCHAR(20),
+    address VARCHAR(20),
+    address2 VARCHAR(20),
+    email VARCHAR(20),
+    password VARCHAR(20),
+    ischeck INT DEFAULT 0
+    */
+
+
+
