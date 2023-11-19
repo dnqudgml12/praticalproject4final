@@ -49,52 +49,54 @@
 <body>
 <div>
 
-    <%
+        <%
         BoardDAO boardDAO = new BoardDAO();
         List<BoardVO> list = boardDAO.getBoardList();
         request.setAttribute("list",list);
     %>
 
-        <div id="list" class="container">
-            <h1>My Vocabulary</h1>
-            <table>
-                <thead>
+    <div id="list" class="container">
+        <h1>My Vocabulary</h1>
+        <table>
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>ID</th>
+                <th>Word</th>
+                <th>Meaning</th>
+                <th>Date</th>
+                <th>Address</th>
+                <th>Address2</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>School</th>
+                <th>Level</th>
+                <th>Menu</th>
+            </tr>
+            </thead>
+            <tbody>
+            <c:forEach items="${list}" var="u">
                 <tr>
-                    <th>#</th>
-                    <th>ID</th>
-                    <th>Word</th>
-                    <th>Meaning</th>
-                    <th>Date</th>
-                    <th>Address</th>
-                    <th>Address2</th>
-                    <th>Email</th>
-                    <th>Password</th>
-                    <th>School</th>
-                    <th>Menu</th>
+                    <td>${u.seq}</td>
+                    <td>${u.id}</td>
+                    <td>${u.word}</td>
+                    <td>${u.meaning}</td>
+                    <td>${u.date}</td>
+                    <td>${u.address}</td>
+                    <td>${u.address2}</td>
+                    <td>${u.email}</td>
+                    <td>${u.password}</td>
+                    <td>${u.school}</td>
+                    <td>${u.level}</td>
+                    <td>
+                        <a style="border-radius:10px;background-color: blue; color: white" href="editform.jsp?id=${u.getSeq()}">Edit</a>
+                        <a style="border-radius:10px;background-color: blue; color: white" href="javascript:delete_ok('${u.getSeq()}')">Delete</a>
+                    </td>
                 </tr>
-                </thead>
-                <tbody>
-                <c:forEach items="${list}" var="u">
-                    <tr>
-                        <td>${u.seq}</td>
-                        <td>${u.id}</td>
-                        <td>${u.word}</td>
-                        <td>${u.meaning}</td>
-                        <td>${u.date}</td>
-                        <td>${u.address}</td>
-                        <td>${u.address2}</td>
-                        <td>${u.email}</td>
-                        <td>${u.password}</td>
-                        <td>${u.school}</td>
-                        <td>
-                            <a style="border-radius:10px;background-color: blue; color: white" href="editform.jsp?id=${u.getSeq()}">Edit</a>
-                            <a style="border-radius:10px;background-color: blue; color: white" href="javascript:delete_ok('${u.getSeq()}')">Delete</a>
-                        </td>
-                    </tr>
-                </c:forEach>
-                </tbody>
-            </table>
-            <a href="addpostform.jsp">Add New Post</a>
-        </div>
+            </c:forEach>
+            </tbody>
+        </table>
+        <a href="addpostform.jsp">Add New Post</a>
+    </div>
 </body>
 </html>

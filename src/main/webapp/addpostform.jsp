@@ -84,7 +84,7 @@
 
   </div>
 
-    <a href="posts.jsp">View All Records</a></td>
+  <a href="posts.jsp">View All Records</a></td>
 
 </form>
 

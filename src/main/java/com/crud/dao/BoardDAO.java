@@ -104,7 +104,7 @@ public class BoardDAO {
             stmt = conn.prepareStatement(BOARD_GET);
             stmt.setInt(1, seq);
             rs = stmt.executeQuery();
-           if(rs.next()){
+            if(rs.next()){
                 one.setSeq(rs.getInt("seq"));
                 one.setEmail(rs.getString("email"));
                 one.setPassword(rs.getString("password"));
