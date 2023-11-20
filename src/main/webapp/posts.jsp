@@ -77,15 +77,15 @@
             <tbody>
             <c:forEach items="${list}" var="u">
                 <tr>
-                    <td>${u.seq}</td>
+                    <td><a style="text-decoration: none" href="view.jsp?id=${u.getSeq()}">${u.seq}</a></td>
                     <td>${u.id}</td>
                     <td>${u.word}</td>
                     <td>${u.meaning}</td>
                     <td>${u.date}</td>
                     <td>${u.address}</td>
                     <td>${u.address2}</td>
-                    <td>${u.email}</td>
                     <td>${u.password}</td>
+                    <td>${u.email}</td>
                     <td>${u.school}</td>
                     <td>${u.level}</td>
                     <td>
